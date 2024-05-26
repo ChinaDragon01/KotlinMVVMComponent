@@ -53,8 +53,15 @@
    >在Activity里，可以通过 by viewModels()
    >在gradle里依赖androidx.fragment:fragment-ktx:xxx
    >在Fragment里，可以通过 by activityViewModels()
+>- 依赖auto-service-annotations
+   >在baselib里添加依赖
+   >dependencies { api(“com.google.auto.service:auto-service-annotations:1.1.1”) }
 >- 依赖auto-service
-   >在每个model单独添加依赖： dependencies { kapt(com.example.compositebuild.Libs.auto_service) }
+   >在每个model单独添加依赖
+   >dependencies { kapt(“com.google.auto.service:auto-service:1.1.1”) }
+
+> KotlinMVVMComponent 每个model都是单独创建gradle plugin，
+> 也可以将业务层的HomeGradlePlugin、CommunityGradlePlugin、MineGradlePlugin，这三个改成统一使用一个gradle plugin。
 
 ### 遇到的问题
 
