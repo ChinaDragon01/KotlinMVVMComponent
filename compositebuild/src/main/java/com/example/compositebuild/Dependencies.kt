@@ -7,7 +7,7 @@ import org.gradle.api.JavaVersion
  * 每个model也可以单独定义一个变量进行控制
  */
 object BusinessModuleDebug{
-    val isBusinessModuleDebug = false
+    val isBusinessModuleDebug =true
 }
 
 object CommonDefaultConfig {
